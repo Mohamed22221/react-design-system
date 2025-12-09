@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import ListItems from './pages/ListItems'
 import SplitScreenPage from './pages/SplitScreen'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <SplitScreenPage />
+      <ListItems />
     </>
   )
 }
