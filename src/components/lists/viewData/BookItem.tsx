@@ -5,12 +5,15 @@ interface Book {
     price: number,
 }
 interface Props {
-    books : Book
+    book?: Book
     
 }
 
-const BookItem = ({books} : Props) => {
-    const {name, title, price} = books
+const BookItem = ({book} : Props) => {
+    const {name, title, price} = book || {};
+    if (!book) {
+      return <div>Loading...</div>;
+    }
   return (
     <div>
         <h2>Name :{name}</h2>
